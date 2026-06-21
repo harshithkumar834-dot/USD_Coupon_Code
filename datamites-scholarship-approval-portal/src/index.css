@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Poppins:wght@500;600;700&family=Manrope:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Poppins", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", "Manrope", sans-serif;
+  
+  --color-brand-blue: #0070C0;
+  --color-brand-orange: #F7941D;
+  --color-brand-dark: #1F2937;
+  --color-brand-muted: #6B7280;
+  --color-brand-border: #E5E7EB;
+  --color-brand-bg-soft: #F8FAFC;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #1F2937;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom premium subtle corporate shadow */
+.premium-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 8px -1px rgba(0, 0, 0, 0.03);
+}
+
+.premium-shadow-hover:hover {
+  box-shadow: 0 12px 30px -4px rgba(0, 112, 192, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Pulse animation matching the brand requirement */
+@keyframes premium-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 112, 192, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 12px rgba(0, 112, 192, 0);
+  }
+}
+
+.premium-pulse {
+  animation: premium-pulse 5s infinite ease-in-out;
+}
+
+/* Smooth custom glass corporate cards */
+.corporate-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.corporate-card-highlight {
+  background: #FFFFFF;
+  border: 1px solid #F7941D;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
